@@ -1,14 +1,14 @@
 # Workout-Generator
 
-##Description:
+## Description:
 This application is meant to be a simple work generator. When struggling to decide what you want to do in the gym, simply utilize our app and generate a workout custom to your needs and specifications. As of 2021 all development was done using React-Native. 
 
-##Requirements:
+## Requirements:
 -A UI
 -Data to display
 -Gains to be made
 
-##Setting/Starting up your environment:
+## Setting/Starting up your environment:
 
 **Step 1**: Install NPM version 12 or above (windows)
 To redirect to installation page, [click here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
