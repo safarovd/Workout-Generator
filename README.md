@@ -4,9 +4,9 @@
 This application is meant to be a simple work generator. When struggling to decide what you want to do in the gym, simply utilize our app and generate a workout custom to your needs and specifications. As of 2021 all development was done using React-Native. 
 
 ## Requirements:
--A UI
--Data to display
--Gains to be made
+- A UI
+- Data to display
+- Gains to be made
 
 ## Setting/Starting up your environment:
 
@@ -28,7 +28,7 @@ npm start
 You should see your browser point to the `Metro Bundler`.
 
 
-##Structural Details:
+## Structural Details:
 
 **Assets Folder**:
 >Here we stroe all audio, images and video files, in short, any asset we want to bundle with our app.
