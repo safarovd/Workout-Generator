@@ -28,6 +28,7 @@ npm i -g expo cli
 **Step 5**: Start app.
 
 ```cmd
+npm install
 npm start
 ```
 
