@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react';
-import { Platform, StyleSheet, View, Text, } from 'react-native';
+import { StyleSheet, View, Text, } from 'react-native';
 
 class BlinkingText extends Component {
   constructor(props) {
@@ -35,7 +35,6 @@ export default class App extends Component {
     </View>
   );
   }
-
 }
 
 const styles = StyleSheet.create({
