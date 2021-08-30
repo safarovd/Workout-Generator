@@ -16,26 +16,20 @@ import SettingsView from './src/screens/settings/settings.js';
 import { Button } from 'react-native-elements/dist/buttons/Button';
 
 
-const AppNav = createStackNavigator({
+const AppNavigation = createStackNavigator({
+  // Cool feature is the initial page is the first screen on this list
   Login: {screen: LoginView},
-  // GeneratorView: {screen: GeneratorView}
+  GeneratorView: {screen: GeneratorView}
 });
 
-const App = createAppContainer(AppNav);
+const AppContainer = createAppContainer(AppNavigation);
 
-export default App;
+export default AppContainer;
 
-class LoginScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Click To Login',
-  };
+class App extends React.Component {
   render() {
-    const {navigate} = this.props.navigation;
     return (
-      <Button
-        title="Go to Home Screen"
-        onPress={() => navigate('GeneratorView')}
-      />
+      <Text>this is the App class</Text>
     );
   }
 }

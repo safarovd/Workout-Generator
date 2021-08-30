@@ -1,6 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { Button } from 'react-native-elements/dist/buttons/Button';
+
+const Separator = () => (
+  <View style={styles.separator} />
+);
 
 class BlinkingText extends React.Component {
   constructor(props) {
@@ -26,21 +31,45 @@ class BlinkingText extends React.Component {
 }
 
 export default class LoginView extends React.Component{
+  static navigationOptions = {
+    title: 'Login Page',
+    //Sets Header text of Status Bar
+    headerStyle: {
+      backgroundColor: '#f4511e',
+      //Sets Header color
+    },
+    headerTintColor: '#fff',
+    //Sets Header text color
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      //Sets Header text style
+    },
+  };
     render() {
-        return(
-          <View style={styles.container}>
+      const { navigate } = this.props.navigation;
+      return(
+        <View style={styles.container}>
+          <TouchableOpacity style={styles.button} onPress={() => navigate('GeneratorView')}>
+            <Text> Navigate To Generator Screen </Text>
+          </TouchableOpacity>
           <BlinkingText text = 'If Minh actually quit wasting time,'/>
-          <BlinkingText text = ' maybe we would be done by now...🥴'/>
+          <BlinkingText text = ' maybe we would be done by now...🥴'/> 
           <StatusBar style="auto" />
         </View>
-          );
+      );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-  });
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    color: '#F08080',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+});
