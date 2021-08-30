@@ -19,7 +19,9 @@ import { Button } from 'react-native-elements/dist/buttons/Button';
 const AppNavigation = createStackNavigator({
   // Cool feature is the initial page is the first screen on this list
   Login: {screen: LoginView},
-  GeneratorView: {screen: GeneratorView}
+  GeneratorView: {screen: GeneratorView},
+  SettingsView: {screen: SettingsView},
+  DataInterpreterView: {screen: DataInterpreterView}
 });
 
 const AppContainer = createAppContainer(AppNavigation);

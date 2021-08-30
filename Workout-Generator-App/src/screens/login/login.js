@@ -48,6 +48,12 @@ export default class LoginView extends React.Component{
           <TouchableOpacity style={styles.button} onPress={() => navigate('GeneratorView')}>
             <Text> Navigate To Generator Screen </Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => navigate('SettingsView')}>
+            <Text> Navigate To Settings Screen </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => navigate('DataInterpreterView')}>
+            <Text> Navigate To Data Interpreter Screen </Text>
+          </TouchableOpacity>
           <BlinkingText text = 'If Minh actually quit wasting time,'/>
           <BlinkingText text = ' maybe we would be done by now...🥴'/> 
           <StatusBar style="auto" />
@@ -67,5 +73,6 @@ const styles = StyleSheet.create({
     color: '#F08080',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10
   }
 });
