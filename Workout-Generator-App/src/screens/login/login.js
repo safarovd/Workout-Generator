@@ -3,10 +3,6 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Button } from 'react-native-elements/dist/buttons/Button';
 
-const Separator = () => (
-  <View style={styles.separator} />
-);
-
 class BlinkingText extends React.Component {
   constructor(props) {
     super(props);
