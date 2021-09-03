@@ -17,5 +17,11 @@ For optimal performance with virtual devices, see [this article](https://android
 * Run the React Native application. In the project folder:
   * Run one terminal with `npx react-native start` for Metro bundler.
   * Run another with `npx react-native run-android` to run the app in the physical or virtual device.
+* Potential Errors:
+  * If you ever experience this error: `error listen EADDRINUSE: address already in use :::8081.` - run the below commands
+  ```cmd
+    netstat -ano|findstr "PID :8081"
+    taskkill /pid <PID> /f
+  ```
 ### iOS development:
 * TBD
