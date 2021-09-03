@@ -98,6 +98,9 @@ StyleCopReport.xml
 *.svclog
 *.scc
 
+# Files built from Android Studio
+.idea/
+
 # Chutzpah Test files
 _Chutzpah*
 
