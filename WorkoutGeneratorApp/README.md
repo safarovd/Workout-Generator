@@ -2,7 +2,7 @@
 
 Follow the [React Native Developer Setup](https://reactnative.dev/docs/environment-setup) guide.
 
-## Android development:
+## Android Development
 * [Download and Install Android Studio](https://developer.android.com/studio). Make sure `Android SDK`, `Android SDK Platform`, and `Android Virtual Device` are checked.
 For optimal performance with virtual devices, see [this article](https://android-developers.googleblog.com/2018/07/android-emulator-amd-processor-hyper-v.html).
 
@@ -32,7 +32,7 @@ For optimal performance with virtual devices, see [this article](https://android
 
 * Configure the Java 8 JDK environment variable
   * MacOS:
-    * Run this to list all of your Java JDKs:
+    * Run this command to list all of your Java JDKs:
       ```bash
       /usr/libexec/java_home -V
       ```
@@ -45,25 +45,38 @@ For optimal performance with virtual devices, see [this article](https://android
       /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
       ```
 
-  * Set the `JAVA_HOME` environment variable to the path that has `jdk` in it. This is what I would put in my `~/.bash_profile` from the example above:
+  * Set the `JAVA_HOME` environment variable to the Java path from the above output that has `jdk` in it. This is what I would put in my `~/.bash_profile` from the example above:
     ```bash
     # Set JAVA_HOME
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
     ```
 
-* Android Devices:
+* Setting up Android Device for Testing:
   * If using a physical device, plug in with USB cable and follow [these directions](https://reactnative.dev/docs/running-on-device).
   * If using a virtual device, [create a new AVD](https://developer.android.com/studio/run/managing-avds) if you haven't, go into the AVD Manager and run the virtual device. **Note: AVD should be API Level 29+ image.**
+
 * Run the React Native application. In the project folder:
-  * Run `npm install` to install all the required Node packages.
+  * Run `npm install` to install all the required Node packages if you haven't done it already.
   * Run one terminal with `npx react-native start` for Metro bundler.
-  * Run another with `npx react-native run-android` to run the app in the physical or virtual device.
-* Potential Errors:
+  * Run another terminal with `npx react-native run-android` to run the app in the physical or virtual device.
+
+### Troubleshooting
   * If you ever experience this error: `error listen EADDRINUSE: address already in use :::8081.` - run the below commands
     ```cmd
     netstat -ano|findstr "PID :8081"
     taskkill /pid <PID> /f
     ```
 
-### iOS development:
-* TBD
+## iOS Development
+* Follow the **React Native Developer Setup** guide above.
+
+* After installing CocoaPods, navigate to the `ios` directory in the project folder and install dependencies by running this command:
+
+  ```
+  pod install
+  ```
+
+* Run the React Native application. In the project folder:
+  * Run `npm install` to install all the required Node packages if you haven't done it already.
+  * Run one terminal with `npx react-native start` for Metro bundler.
+  * Run another terminal with `npx react-native run-ios` to run the app in the physical or virtual device.
