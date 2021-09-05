@@ -45,11 +45,11 @@ For optimal performance with virtual devices, see [this article](https://android
       /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
       ```
 
-  * Set the `JAVA_HOME` environment variable to the Java path from the above output that has `jdk` in it. This is what I would put in my `~/.bash_profile` from the example above:
-    ```bash
-    # Set JAVA_HOME
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
-    ```
+    * Set the `JAVA_HOME` environment variable to the Java path from the above output that has `jdk` in it. This is what I would put in my `~/.bash_profile` from the example above:
+      ```bash
+      # Set JAVA_HOME
+      export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
+      ```
 
 * Setting up Android Device for Testing:
   * If using a physical device, plug in with USB cable and follow [these directions](https://reactnative.dev/docs/running-on-device).
