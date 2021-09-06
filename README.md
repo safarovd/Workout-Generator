@@ -12,7 +12,7 @@ This application is meant to be a simple work generator. When struggling to deci
   - Contact
   - Settings
 - Screen: Generate Workout
-  - Filter button (Modal?, downward screen slider?) (**impl as own component**)
+  - Filter button (Modal?, downward screen slider?) (**impl as own `workout` component**)
   - Generate button
   - Displays workouts and images?
   - Potentially link to youtube form videos (Modal?, Popup?)
@@ -20,6 +20,10 @@ This application is meant to be a simple work generator. When struggling to deci
   - Ability to shuffle workout (select prefered exercise and regen the rest)
   - Ability to select Quick Filters
   - Save workout (with preferences)
+- Screen: Workout Screen (**impl as own `workout` component**)
+  - Displays generated workouts
+  - Timer
+  - Show progress as you complete exercises
 - Screen: Saved Workouts
   - Entire workout can be saved to devices memory
   - Multiple workouts can be saved
