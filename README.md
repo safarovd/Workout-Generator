@@ -16,13 +16,14 @@ This application is meant to be a simple work generator. When struggling to deci
   - Generate button
   - Displays workouts and images?
   - Potentially link to youtube form videos (Modal?, Popup?)
-  - Indicator for exercise completion
   - Ability to shuffle workout (select prefered exercise and regen the rest)
   - Ability to select Quick Filters
   - Save workout (with preferences)
-- Screen: Workout Screen (**impl as own `workout` component**)
-  - Displays generated workouts
-  - Timer
+- Screen: View Workout Screen (**impl as own `WorkoutView` component**)
+  - Displays generated workout
+- Screen: Do Workout Screen 
+  - Displays generated workout
+  - Indicator for exercise completion
   - Show progress as you complete exercises
 - Screen: Saved Workouts
   - Entire workout can be saved to devices memory
