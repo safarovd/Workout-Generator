@@ -15,29 +15,29 @@ This application is meant to be a simple work generator. When struggling to deci
   - Filter button (Modal?, downward screen slider?) (**impl as own `workout` component**)
   - Generate button
   - Displays workouts and images?
-  - Potentially link to youtube form videos (Modal?, Popup?)
   - Ability to shuffle workout (select prefered exercise and regen the rest)
   - Ability to select Quick Filters
   - Save workout (with preferences)
 - Screen: View Workout Screen (**impl as own `WorkoutView` component**)
   - Displays generated workout
+  - Start Workout
 - Screen: Do Workout Screen 
   - Displays generated workout
   - Indicator for exercise completion
-  - Show progress as you complete exercises
 - Screen: Saved Workouts
   - Entire workout can be saved to devices memory
   - Multiple workouts can be saved
-  - Select workout (load workout in Generate Workouts with saved preferences)
+  - Select workout (to view workout and do workout)
   - Name workouts
+  - Delete workouts
 - Screen: Quick Filter
   - Bundles of filter fields saved to memory
-  - Add new prefered filters entry
-  - Flag as prefered muscle group workout
   - Use filter/Generate workout with filter
   - Delete filter
   - Modify filter
   - Named prefered filter entry
+  - Add new prefered filters entry (Maybe)
+  - Flag as prefered muscle group workout (Maybe)
 
 ## Requirements (Version 2):
 
@@ -50,6 +50,7 @@ This application is meant to be a simple work generator. When struggling to deci
   - Focuses (Mobility, Cardio, Stregth, Aesthetics, etc.)
   - Diffculty?
   - Rest Timer ~ Associate with "Diffculty"
+- Potentially link to youtube form videos (Modal?, Popup?)
 
 - Implement Machine Learning
 
