@@ -4,7 +4,7 @@
 
 This application is meant to be a simple work generator. When struggling to decide what you want to do in the gym, simply utilize our app and generate a workout custom to your needs and specifications. As of 2021 all development was done using React-Native.
 
-## Requirements (Version 1):
+## Requirements ([Version 1](https://www.figma.com/file/JkizWizhH3KTMOHfdbuYz5/Workout-Generator-App-Mock-Up-v1?node-id=0%3A1)):
 
 - Flyout: Options or App Name
   - Quick Filters (previously saved filter fields)
