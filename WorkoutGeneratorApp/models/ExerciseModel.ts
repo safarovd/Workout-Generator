@@ -2,7 +2,6 @@
 /* One set of an exercise, denoted by W x R. */
 interface ExerciseSet {
   IntensityLevel: ExerciseIntensity;
-  NumberOfSets  : number;
   Weight        : number;
   Reps          : number;
   Unit          : MeasurementSystem;
