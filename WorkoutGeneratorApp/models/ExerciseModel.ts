@@ -1,31 +1,37 @@
 /* eslint-disable prettier/prettier */
 /* One set of an exercise, denoted by W x R. */
 interface ExerciseSet {
-  readonly Weight        : number;
-  readonly Reps          : number;
-  readonly IntensityLevel: ExerciseIntensity;
-  IsCompleted            : boolean;
-  RestTime?              : number;  //TBD, editable by user for long rest periods?
+  IntensityLevel: ExerciseIntensity;
+  NumberOfSets  : number;
+  Weight        : number;
+  Reps          : number;
+  Unit          : MeasurementSystem;
+  IsCompleted   : boolean;
+  RestTime?     : number;  //TBD, editable by user for long rest periods?
 }
 
 /* Base Exercise model. */
 export interface Exercise {
-  readonly Name       : string;
-  readonly Sets       : ReadonlyArray<Omit<ExerciseSet, 'IsCompleted'>>;
-  readonly Unit       : MeasurementSystem;
-  readonly Image?     : unknown; //TBD
-  readonly Media?     : unknown; //TBD
-  readonly Type       : ExerciseType;
-  readonly MuscleFocus: MuscleGroup;
+  Name       : string;
+  Image?     : unknown; //TBD
+  Media?     : unknown; //TBD
+  Type       : ExerciseType;
+  MuscleFocus: MuscleGroup;
+}
+
+/* ExerciseView */
+export interface ExerciseView extends Exercise {
+  Sets: ReadonlyArray<Omit<ExerciseSet, 'IsCompleted'>>;
 }
 
 /* ExerciseGenerate */
 export interface ExerciseGenerate extends Exercise {
+  Sets: ReadonlyArray<Omit<ExerciseSet, 'IsCompleted'>>;
   IsLocked: boolean;
 }
 
 /* ExerciseDo */
-export interface ExerciseDo extends Omit<Exercise, 'Sets'> {
+export interface ExerciseDo extends Exercise {
   Sets: Array<ExerciseSet>;
 }
 
