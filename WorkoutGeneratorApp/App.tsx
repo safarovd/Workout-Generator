@@ -14,6 +14,8 @@ import {
   View,
 } from 'react-native';
 
+import { Provider as PaperProvider } from 'react-native-paper';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator  } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -28,13 +30,15 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name = "Workout Generator" component = {WorkoutGeneratorScreen} />
-        <Tab.Screen name = "Saved Workouts" component = {SavedWorkoutsScreen} />
-        <Tab.Screen name = "Quick Filters" component = {SavedFiltersScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Workout Generator" component={WorkoutGeneratorScreen}/>
+          <Tab.Screen name="Saved Workouts" component={SavedWorkoutsScreen}/>
+          <Tab.Screen name="Quick Filters" component={SavedFiltersScreen}/>
+        </Tab.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
 
