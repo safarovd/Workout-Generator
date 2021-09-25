@@ -15,10 +15,6 @@ import WorkoutGeneratorScreen from './screens/WorkoutGeneratorScreen/WorkoutGene
 import SavedWorkoutsScreen from './screens/SaveScreens/SavedWorkoutsScreen';
 import SavedFiltersScreen from './screens/SaveScreens/SavedFiltersScreen';
 
-
-
-// const Tab = createBottomTabNavigator();
-
 const App = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
