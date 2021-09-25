@@ -7,18 +7,9 @@
  *
  * @format
  */
-
-import React from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
-
-import { Provider as PaperProvider } from 'react-native-paper';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator  } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import { NavigationContainer } from '@react-navigation/native';
+import * as React from 'react';
+import { BottomNavigation } from 'react-native-paper';
 
 import WorkoutGeneratorScreen from './screens/WorkoutGeneratorScreen/WorkoutGeneratorScreen';
 import SavedWorkoutsScreen from './screens/SaveScreens/SavedWorkoutsScreen';
@@ -26,37 +17,29 @@ import SavedFiltersScreen from './screens/SaveScreens/SavedFiltersScreen';
 
 
 
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
 
-export default function App() {
+const App = () => {
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'workoutgenerator', title: 'Workout Generator', icon: 'home' },
+    { key: 'savedworkouts', title: 'Saved Workouts', icon: 'floppy' },
+    { key: 'savedfilters', title: 'Saved Filters', icon: 'filter' },
+  ]);
+
+  const renderScene = BottomNavigation.SceneMap({
+    workoutgenerator: WorkoutGeneratorScreen,
+    savedworkouts: SavedWorkoutsScreen,
+    savedfilters: SavedFiltersScreen,
+  });
+
   return (
-    <PaperProvider>
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="Workout Generator" component={WorkoutGeneratorScreen}/>
-          <Tab.Screen name="Saved Workouts" component={SavedWorkoutsScreen}/>
-          <Tab.Screen name="Quick Filters" component={SavedFiltersScreen}/>
-        </Tab.Navigator>
-      </NavigationContainer>
-    </PaperProvider>
+    <BottomNavigation
+    navigationState={{ index, routes }}
+    onIndexChange={setIndex}
+    renderScene={renderScene}
+  />
   );
 }
 
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
+export default App;
