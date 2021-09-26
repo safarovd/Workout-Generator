@@ -7,13 +7,15 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "freshtall": "npm cache clean --force && rmdir /s node_modules && del -f package-lock.json && npm install"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
+    "@types/react-native-vector-icons": "^6.4.9",
     "@types/react-navigation": "^3.4.0",
     "react": "17.0.2",
     "react-native": "0.65.1",
